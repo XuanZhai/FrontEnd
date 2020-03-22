@@ -1,0 +1,61 @@
+nav {
+    background-color: #4a64a8;
+}
+
+.welcome {
+    color: white;
+    float: right;
+    margin-top: -5em;
+    margin-right: 1em;
+}
+
+#cart {
+    float: right;
+    margin-top: -3em;
+    margin-right: 1em;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#cartImg {
+    margin-top: .2em;
+    margin-left: .1em;
+    margin-right: .2em;
+    width: .8em;
+}
+
+p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.menu {
+    text-align: center;
+    display: flexbox;
+}
+
+#menuButton {
+    display: flexbox;
+    color: white;
+    background-color: #4a65a888;
+    border-style: solid;
+    border-color: #4a64a8;
+    border-width: .05em;
+    border-radius: .1em;
+    transition: all 250ms ease-in-out;
+    text-align: center;
+    font-size: xxx-large;
+    height: 13.5em;
+    width: 7em;
+    margin: .5em;
+    cursor: pointer;
+}
+
+#menuButton:hover {
+    background-color: #4a64a8;
+
+}
