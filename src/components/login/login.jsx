@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./pharmtechblue.png";
 import {Link} from "react-router-dom";
+import { PharmManager } from "../pages";
 
 export class Login extends React.Component {
 
@@ -47,7 +48,6 @@ export class Login extends React.Component {
                     </div>
                 </div>
                 <div className="footer">
-                    {this.state.username}
                     {(() => {
                     if (this.state.loginType === "pharmManager" && this.state.username) {
                         return (
@@ -55,7 +55,14 @@ export class Login extends React.Component {
                              params: {username: this.state.username},
                              hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
                         )
-                    } 
+                    }
+                    else if (this.state.loginType === "Manufacturer" && this.state.username) {
+                        return (
+                            <Link to={{pathname:"/Manufacturer",
+                             params: {username: this.state.username},
+                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                        )
+                    }  
                     })()}
                 </div>
                 <div className = "registerHere">

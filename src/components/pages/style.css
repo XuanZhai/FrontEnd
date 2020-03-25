@@ -49,8 +49,8 @@ p {
     transition: all 250ms ease-in-out;
     text-align: center;
     font-size: xxx-large;
-    height: 13.5em;
-    width: 7em;
+    height: 14em;
+    width: 6em;
     margin: .5em;
     cursor: pointer;
 }

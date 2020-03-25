@@ -65,6 +65,13 @@ export class Register extends React.Component {
                              hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
                         )
                     } 
+                    else if (this.state.loginType === "Manufacturer" && this.state.username) {
+                        return (
+                            <Link to={{pathname:"/Manufacturer",
+                             params: {username: this.state.username},
+                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                        )
+                    } 
                     })()}
                 </div>
             </div>

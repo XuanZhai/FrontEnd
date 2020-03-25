@@ -3,7 +3,7 @@ import Logo from "./erpharmtechgrayer.png";
 import Cart from "./cart.png";
 import {Link} from "react-router-dom";
 
-export class PharmManager extends React.Component {
+export class Manufacturer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,18 +24,14 @@ export class PharmManager extends React.Component {
                     <h1 className = "welcome">
                         Welcome back {this.state.username}!
                     </h1>
-                    <button id = "cart" type="button">
-                        View Cart
-                            <img src={Cart} id = "cartImg"/>
-                            <p>$100</p>
-                    </button>
                 </nav>
                </div>
                <div className = "menu">
-                    <button type = "button" id = "menuButton">Your<br />Pharmacy</button>
-                    <button type = "button" id = "menuButton">View<br/>Inventory</button>
-                    <button type = "button" id = "menuButton">View<br/>Sales</button>
-                    <button type = "button" id = "menuButton">Send<br /> Request</button>
+                    <button type = "button" id = "menuButton">View<br />Available <br/>Medications</button>
+                    <button type = "button" id = "menuButton">View<br/>Incoming <br/> Drugs</button>
+                    <button type = "button" id = "menuButton">View<br/>Your <br/> Sales</button>
+                    <button type = "button" id = "menuButton">View<br /> Manufacturer <br/> Information</button>
+                    <button type = "button" id = "menuButton">View<br /> Drug <br/> Information</button>
                </div>
            </div>
         );
