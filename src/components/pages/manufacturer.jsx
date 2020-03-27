@@ -18,20 +18,20 @@ export class Manufacturer extends React.Component {
            <div className = "body">
                <div className = "navBar">
                 <nav>
-                    <div className = "img">
+                    <div className = "img" id = "logo">
                         <img src={Logo} />
                     </div>
-                    <h1 className = "welcome">
+                    <h1 className = "welcomeMan">
                         Welcome back {this.state.username}!
                     </h1>
                 </nav>
                </div>
-               <div className = "menu">
-                    <button type = "button" id = "menuButton">View<br />Available <br/>Medications</button>
-                    <button type = "button" id = "menuButton">View<br/>Incoming <br/> Drugs</button>
-                    <button type = "button" id = "menuButton">View<br/>Your <br/> Sales</button>
-                    <button type = "button" id = "menuButton">View<br /> Manufacturer <br/> Information</button>
-                    <button type = "button" id = "menuButton">View<br /> Drug <br/> Information</button>
+               <div className = "menu" id = "manufacturer">
+                    <button type = "button" id = "manMenuButton">View<br />Available <br/>Medications</button>
+                    <button type = "button" id = "manMenuButton">View<br/>Incoming <br/> Drugs</button>
+                    <button type = "button" id = "manMenuButton">View<br/>Your <br/> Sales</button>
+                    <button type = "button" id = "manMenuButton">View<br /> Manufacturer <br/> Information</button>
+                    <button type = "button" id = "manMenuButton">View<br /> Drug <br/> Information</button>
                </div>
            </div>
         );

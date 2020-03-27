@@ -18,17 +18,18 @@ export class PharmManager extends React.Component {
            <div className = "body">
                <div className = "navBar">
                 <nav>
-                    <div className = "img">
+                    <div className = "img" id = "logo">
                         <img src={Logo} />
                     </div>
                     <h1 className = "welcome">
                         Welcome back {this.state.username}!
                     </h1>
-                    <button id = "cart" type="button">
-                        View Cart
-                            <img src={Cart} id = "cartImg"/>
-                            <p>$100</p>
-                    </button>
+                    <Link to="/pharmManager/viewCart">
+                        <button id = "cart" type="button">
+                            View Cart
+                                <img src={Cart} id = "cartImg"/>
+                        </button>
+                    </Link> 
                 </nav>
                </div>
                <div className = "menu">
