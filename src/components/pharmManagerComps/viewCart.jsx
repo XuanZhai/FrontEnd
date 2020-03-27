@@ -27,10 +27,10 @@ export class ViewCart extends React.Component {
                             <th>Subtotal</th>
                         </tr>
                         <tr>
-                            <td>Symbyzide Parodafinil
+                            <td id = "item">Symbyzide Parodafinil
                             <button type = "button" id = "swap">Swap</button>
                             </td>
-                            <td>
+                            <td id = "item">
                                 <select id = "quantity">
                                     <option value = "1">1</option>
                                     <option value = "2">2</option>
@@ -44,10 +44,26 @@ export class ViewCart extends React.Component {
                                 </select>
                                 <button type = "button" id = "delete">Delete</button>
                             </td>
-                            <td>$18</td>
+                            <td id = "item">$18</td>
+                        </tr>
+                        <tr className = "lastRow">
+                            <td>
+                                <div className = "extraButtons">
+                                    <button type = "button" id = "addItems">Add Items</button>
+                                </div>
+                            </td>
+                            <td colSpan = "2">
+                            <h3 id = "total">Total: $18</h3> <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan = "3">
+                                <div className = "extraButtons">
+                                    <button type = "button" className = "placeOrder">Place Order</button>
+                                </div>
+                            </td>
                         </tr>
                     </table>
-                       <h3 id = "total">Total: $18</h3>
                 </div>
            </div>
         );

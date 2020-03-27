@@ -48,6 +48,7 @@ nav {
 .menu {
     text-align: center;
     display: flexbox;
+    position: relative;
 }
 
 #menuButton {
@@ -110,7 +111,12 @@ nav {
     text-align: center;
 }
 
-.itemsTable table, th, td{
+.itemsTable table, th, #item{
+    border-style: solid;
+    border-color: #4a64a8;
+}
+
+tr {
     border-style: solid;
     border-color: #4a64a8;
 }
@@ -122,9 +128,10 @@ table {
     font-size: x-large;
 }
 
-.itemsTable th, td {
+.itemsTable th, #item {
     text-align: left;
 }
+
 
 #quantity {
     font-size: x-large;
@@ -155,11 +162,42 @@ table {
     background-color: #4a65a888;
 }
 
-
 #total {
+    text-align: center;
+    height: 0em;
     font-size: x-large;
-    margin-top: 0em;
-    margin-right: 11.2em;
+}
+
+#addItems {
+    margin-left: 1em;
+    float: left;
+}
+
+.extraButtons button {
+    position: relative;
+    color: white;
+    background-color: #4a64a8;
+    border-style: solid;
+    border-color: #233050;
+    border-width: .05em;
+    border-radius: .1em;
+    transition: all 250ms ease-in-out;
+    text-align: center;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.placeOrder:hover {
+    background-color: #2d8f56;
+}
+
+#addItems:hover {
+    background-color: #233050;
+}
+
+.placeOrder {
+    height: 3em;
     float: right;
 }
+
 

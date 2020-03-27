@@ -24,7 +24,7 @@ export class PharmManager extends React.Component {
                     <h1 className = "welcome">
                         Welcome back {this.state.username}!
                     </h1>
-                    <Link to="/pharmManager/viewCart">
+                    <Link to="/pharmManager/cart">
                         <button id = "cart" type="button">
                             View Cart
                                 <img src={Cart} id = "cartImg"/>
@@ -33,8 +33,8 @@ export class PharmManager extends React.Component {
                 </nav>
                </div>
                <div className = "menu">
-                    <button type = "button" id = "menuButton">Your<br />Pharmacy</button>
-                    <button type = "button" id = "menuButton">View<br/>Inventory</button>
+                    <Link to ="/pharmManager/yourPharmacy"><button type = "button" id = "menuButton">Your<br />Pharmacy</button></Link>
+                    <Link to ="/pharmManager/inventory"><button type = "button" id = "menuButton">View<br/>Inventory</button></Link>
                     <button type = "button" id = "menuButton">View<br/>Sales</button>
                     <button type = "button" id = "menuButton">Send<br /> Request</button>
                </div>
