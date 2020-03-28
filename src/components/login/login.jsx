@@ -62,6 +62,13 @@ export class Login extends React.Component {
                              params: {username: this.state.username},
                              hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
                         )
+                    }
+                    else if (this.state.loginType === "Pharmacist" && this.state.username) {
+                        return (
+                            <Link to={{pathname:"/Pharmacist",
+                             params: {username: this.state.username},
+                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                        )
                     }  
                     })()}
                 </div>

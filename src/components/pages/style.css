@@ -63,7 +63,7 @@ nav {
     text-align: center;
     font-size: xxx-large;
     height: 14em;
-    width: 5em;
+    width: 6em;
     margin: .5em;
     cursor: pointer;
 }
@@ -198,6 +198,27 @@ table {
 .placeOrder {
     height: 3em;
     float: right;
+}
+
+.notification li {                     /* Notification for new info in pharmacist */        
+    max-width: 6cm;
+    word-wrap:break-word;
+    font-size: large;
+    font-weight: 400;
+    margin-right: 1cm;
+}
+
+.notification p {
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    margin-right: 0.5em;
+}
+
+.notification {
+    float: right;
+    margin-top: -1em;
+    margin-right: 0.5em;
 }
 
 
