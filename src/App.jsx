@@ -12,6 +12,7 @@ import { Manufacturer } from './components/pages/manufacturer';
 import { ViewCart } from './components/pharmManagerComps/viewCart';
 import { YourPharmacy, Inventory } from './components/pharmManagerComps';
 
+
 class App extends React.Component {
     constructor(props) {
       super(props);
@@ -23,9 +24,10 @@ class App extends React.Component {
       return (
         <Router>
           <Switch>
+            <Route exact path="/" ><Login /></Route>
             <Route exact path="/login" ><Login /></Route>
             <Route exact path="/register"><Register /></Route>
-            <Route exact path="/pharmManager" ><PharmManager /></Route>
+            <Route exact path="/pharmManager"><PharmManager /></Route>
                 <Route exact path="/pharmManager/cart" ><ViewCart /></Route>
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>

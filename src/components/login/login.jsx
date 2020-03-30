@@ -14,7 +14,6 @@ export class Login extends React.Component {
         this.findLoginType = this.findLoginType.bind(this);
         this.getUsername = this.getUsername.bind(this);
     }
-
     findLoginType(e) {
         this.setState({ loginType: e.target.value });
     }

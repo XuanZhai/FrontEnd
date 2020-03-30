@@ -6,6 +6,30 @@ export class ViewCart extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            total: 14,
+            quantity: 0,
+            drugs: [{
+                "name": "Symbyzide Parodafinil",
+                "cost": 6,
+                "quantity": 0
+            },
+            {
+                "name": "Ibuprofen",
+                "cost": 8,
+                "quantity": 0
+            },
+            ]
+        }
+        this.findTotal = this.findTotal.bind(this);
+        this.findQuantity = this.findQuantity.bind(this);
+    }
+
+    findTotal(e, total) {
+        this.setState({total: this.state.total + e.target.value});
+    }
+    findQuantity(e) {
+        this.setState({quantity: e.target.value});
     }
 
     render() {
@@ -26,12 +50,13 @@ export class ViewCart extends React.Component {
                             <th>Quantity</th>
                             <th>Subtotal</th>
                         </tr>
-                        <tr>
-                            <td id = "item">Symbyzide Parodafinil
-                            <button type = "button" id = "swap">Swap</button>
-                            </td>
-                            <td id = "item">
-                                <select id = "quantity">
+                            {this.state.drugs.map(item => (
+                                <tr>
+                                  <td id = "item">{item.name}
+                                  <button type = "button" id = "swap">Swap</button>
+                                  </td>
+                                  <td id = "item">
+                                <select id = "quantity" onChange={this.findQuantity}>
                                     <option value = "1">1</option>
                                     <option value = "2">2</option>
                                     <option value = "3">3</option>
@@ -42,10 +67,12 @@ export class ViewCart extends React.Component {
                                     <option value = "8">8</option>
                                     <option value = "9">9</option>
                                 </select>
-                                <button type = "button" id = "delete">Delete</button>
-                            </td>
-                            <td id = "item">$18</td>
-                        </tr>
+                                    <button type = "button" id = "delete">Delete</button>
+                                    </td>
+
+                                    <td id = "item">${item.cost}</td>
+                                </tr>
+                            ))}
                         <tr className = "lastRow">
                             <td>
                                 <div className = "extraButtons">
@@ -53,7 +80,7 @@ export class ViewCart extends React.Component {
                                 </div>
                             </td>
                             <td colSpan = "2">
-                            <h3 id = "total">Total: $18</h3> <br/>
+                            <h3 id = "total">Total: ${this.state.total}</h3> <br/>
                             </td>
                         </tr>
                         <tr>

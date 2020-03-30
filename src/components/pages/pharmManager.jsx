@@ -8,9 +8,8 @@ export class PharmManager extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "test",
+            username: this.params.username,
         };
-        // const { username } = this.props.match.params.username
     }
 
     render() {
@@ -22,7 +21,7 @@ export class PharmManager extends React.Component {
                         <img src={Logo} />
                     </div>
                     <h1 className = "welcome">
-                        Welcome back {this.state.username}!
+                        Welcome back {this.props.username}!
                     </h1>
                     <Link to="/pharmManager/cart">
                         <button id = "cart" type="button">
