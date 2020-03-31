@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./erpharmtechgrayer.png";
-import Cart from "./cart.png";
+//import Cart from "./cart.png";
 import {Link} from "react-router-dom";
 
 export class Manufacturer extends React.Component {
@@ -19,7 +19,7 @@ export class Manufacturer extends React.Component {
                <div className = "navBar">
                 <nav>
                     <div className = "img" id = "logo">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcomeMan">
                         Welcome back {this.state.username}!
