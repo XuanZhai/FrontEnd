@@ -72,7 +72,7 @@ export class Login extends React.Component {
                     })()}
                 </div>
                 <div className = "registerHere">
-                    <Link to="/register" >Register</Link>
+                    <Link to="/register" ><button type = "button" className="btn">Register</button></Link>
                 </div>
             </div>
         );
