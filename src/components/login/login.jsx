@@ -37,7 +37,7 @@ export class Login extends React.Component {
                         </div>
                         <div className = "loginType">
                             <select id = "type" onChange={this.findLoginType}>
-                                <option value = "default" disabled>Select an account type...</option>
+                                <option value = "default" selected disabled>Select an account type...</option>
                                 <option value = "pharmManager">Pharmacy Manager</option>
                                 <option value = "Manufacturer">Manufacturer</option>
                                 <option value = "Pharmacist">Pharmacist</option>
