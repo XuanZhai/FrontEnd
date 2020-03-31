@@ -18,7 +18,7 @@ export class PharmManager extends React.Component {
                <div className = "navBar">
                 <nav>
                     <div className = "img" id = "logo">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcome">
                         Welcome back {this.props.username}!
@@ -26,7 +26,7 @@ export class PharmManager extends React.Component {
                     <Link to="/pharmManager/cart">
                         <button id = "cart" type="button">
                             View Cart
-                                <img src={Cart} id = "cartImg"/>
+                                <img src={Cart} alt="Cart" id = "cartImg"/>
                         </button>
                     </Link> 
                 </nav>
