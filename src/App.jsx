@@ -12,8 +12,10 @@ import { Manufacturer } from './components/pages/manufacturer';
 import { Pharmacist } from './components/pages/pharmacist';
 import { IncomingOrder, OutgoingOrder, ReceivedOrder, Prescription } from './components/pharmacistComps';
 import { PharmacistIn } from './components/pharmacistComps';
+import { Doctor } from './components/pages/doctor';
 import { ViewCart } from './components/pharmManagerComps/viewCart';
 import { YourPharmacy, Inventory } from './components/pharmManagerComps';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -26,9 +28,10 @@ class App extends React.Component {
       return (
         <Router>
           <Switch>
+            <Route exact path="/" ><Login /></Route>
             <Route exact path="/login" ><Login /></Route>
             <Route exact path="/register"><Register /></Route>
-            <Route exact path="/pharmManager" ><PharmManager /></Route>
+            <Route exact path="/pharmManager"><PharmManager /></Route>
                 <Route exact path="/pharmManager/cart" ><ViewCart /></Route>
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>
@@ -41,6 +44,7 @@ class App extends React.Component {
                 <Route exact path="/pharmacist/Prescription" ><Prescription /></Route>
                 <Route exact path="/pharmacist/PharmacistIn" ><PharmacistIn /></Route>
 
+            <Route exact path="/Doctor" ><Doctor /></Route>
           </Switch>
         </Router>
       )

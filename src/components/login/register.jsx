@@ -27,7 +27,7 @@ export class Register extends React.Component {
             <div className = "base-container" id = "register">
                 <div className = "contents">
                     <div className = "img">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo"/>
                     </div>
                     <div className="form">
                     <div className = "firstName">
@@ -79,6 +79,13 @@ export class Register extends React.Component {
                              hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
                         )
                     } 
+                    else if (this.state.loginType === "Doctor" && this.state.username) {
+                        return (
+                            <Link to={{pathname:"/Doctor",
+                             params: {username: this.state.username},
+                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                        )
+                    }
                     })()}
                 </div>
             </div>

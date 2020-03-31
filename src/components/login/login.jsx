@@ -14,7 +14,6 @@ export class Login extends React.Component {
         this.findLoginType = this.findLoginType.bind(this);
         this.getUsername = this.getUsername.bind(this);
     }
-
     findLoginType(e) {
         this.setState({ loginType: e.target.value });
     }
@@ -27,7 +26,7 @@ export class Login extends React.Component {
             <div className = "base-container">
                 <div className = "contents">
                     <div className = "img">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo"/>
                     </div>
                     <div className="form">
                         <div className = "username" onChange={this.getUsername}>
@@ -38,7 +37,7 @@ export class Login extends React.Component {
                         </div>
                         <div className = "loginType">
                             <select id = "type" onChange={this.findLoginType}>
-                                <option value = "default">Select an account type...</option>
+                                <option value = "default" selected disabled>Select an account type...</option>
                                 <option value = "pharmManager">Pharmacy Manager</option>
                                 <option value = "Manufacturer">Manufacturer</option>
                                 <option value = "Pharmacist">Pharmacist</option>
@@ -70,10 +69,17 @@ export class Login extends React.Component {
                              hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
                         )
                     }  
+                    else if (this.state.loginType === "Doctor" && this.state.username) {
+                        return (
+                            <Link to={{pathname:"/Doctor",
+                             params: {username: this.state.username},
+                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                        )
+                    }
                     })()}
                 </div>
                 <div className = "registerHere">
-                    <Link to="/register" >Register</Link>
+                    <Link to="/register" ><button type = "button" className="btn">Register</button></Link>
                 </div>
             </div>
         );
