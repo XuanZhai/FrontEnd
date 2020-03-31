@@ -9,6 +9,7 @@ import { Login } from "./components/login"
 import { Register } from "./components/login"
 import { PharmManager } from "./components/pages"
 import { Manufacturer } from './components/pages/manufacturer';
+import { Doctor } from './components/pages/doctor';
 import { ViewCart } from './components/pharmManagerComps/viewCart';
 import { YourPharmacy, Inventory } from './components/pharmManagerComps';
 
@@ -32,6 +33,7 @@ class App extends React.Component {
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>
             <Route exact path="/Manufacturer" ><Manufacturer /></Route>
+            <Route exact path="/Doctor" ><Manufacturer /></Route>
           </Switch>
         </Router>
       )
