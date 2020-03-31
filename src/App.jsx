@@ -33,7 +33,7 @@ class App extends React.Component {
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>
             <Route exact path="/Manufacturer" ><Manufacturer /></Route>
-            <Route exact path="/Doctor" ><Manufacturer /></Route>
+            <Route exact path="/Doctor" ><Doctor /></Route>
           </Switch>
         </Router>
       )
