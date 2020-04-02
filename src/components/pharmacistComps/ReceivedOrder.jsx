@@ -4,10 +4,12 @@ import {Link} from "react-router-dom";
 
 export class ReceivedOrder extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
+        this.username = localStorage['username']
     }
-
     render() {
         return (
            <div className = "body">

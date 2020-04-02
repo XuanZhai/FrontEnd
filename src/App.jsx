@@ -18,8 +18,11 @@ import { YourPharmacy, Inventory } from './components/pharmManagerComps';
 
 
 class App extends React.Component {
+  username;
+    
     constructor(props) {
       super(props);
+      this.username = localStorage['username']
       this.state = {
       }
     }
@@ -31,7 +34,7 @@ class App extends React.Component {
             <Route exact path="/" ><Login /></Route>
             <Route exact path="/login" ><Login /></Route>
             <Route exact path="/register"><Register /></Route>
-            <Route exact path="/pharmManager"><PharmManager /></Route>
+            <Route exact path="/pharmManager/"><PharmManager /></Route>
                 <Route exact path="/pharmManager/cart" ><ViewCart /></Route>
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>

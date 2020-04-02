@@ -18,7 +18,9 @@ export class Login extends React.Component {
         this.setState({ loginType: e.target.value });
     }
     getUsername(e) {
-        this.setState({ username: e.target.value });
+        var value = e.target.value;
+        this.setState({username: value});
+        localStorage.setItem('username', this.state.username);
     }
 
     render() {
@@ -51,8 +53,8 @@ export class Login extends React.Component {
                     if (this.state.loginType === "pharmManager" && this.state.username) {
                         return (
                             <Link to={{pathname:"/pharmManager",
-                             params: {username: this.state.username},
-                             hash: this.state.username,}}><button type = "button" className="btn">Login</button></Link>
+                             params: {username: this.state.username}
+                             }}><button type = "button" className="btn">Login</button></Link>
                         )
                     }
                     else if (this.state.loginType === "Manufacturer" && this.state.username) {

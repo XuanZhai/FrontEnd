@@ -4,8 +4,11 @@ import {Link} from "react-router-dom";
 
 export class ViewCart extends React.Component {
 
+    username;
+
     constructor(props) {
         super(props);
+        this.username = localStorage['username']
         this.state = {
             total: 14,
             quantity: 0,

@@ -4,8 +4,11 @@ import {Link} from "react-router-dom";
 
 export class IncomingOrder extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
+        this.username = localStorage['username']
     }
 
     render() {

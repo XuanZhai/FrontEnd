@@ -5,12 +5,11 @@ import {Link} from "react-router-dom";
 
 export class Manufacturer extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
-        this.state = {
-            username: "test",
-        };
-        // const { username } = this.props.match.params.username
+        this.username = localStorage['username']
     }
 
     render() {

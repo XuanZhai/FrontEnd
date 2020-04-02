@@ -19,6 +19,7 @@ export class Register extends React.Component {
     }
     getUsername(e) {
         this.setState({ username: e.target.value });
+        localStorage.setItem('username', this.state.username);
     }
 
 
