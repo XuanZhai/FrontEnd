@@ -108,6 +108,7 @@ nav {
 
 
 .itemsTable {
+    margin: 1em;
     text-align: center;
 }
 
@@ -118,12 +119,12 @@ nav {
 
 tr {
     border-style: solid;
-    border-color: #4a64a8;
+    border-color: #4a64a8;   
 }
 
 table {
-    margin: auto;
-    width: 80%;
+    padding: 1em;
+    width: 100%;
     border-collapse: collapse;
     font-size: x-large;
 }

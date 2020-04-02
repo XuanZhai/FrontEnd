@@ -8,7 +8,7 @@ export class PharmManager extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: this.params.username,
+            // username: this.params.username,
         };
     }
 
