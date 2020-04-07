@@ -5,12 +5,11 @@ import {Link} from "react-router-dom";
 
 export class Doctor extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
-        this.state = {
-            username: "test",
-        };
-        // const { username } = this.props.match.params.username
+        this.username = localStorage['username']
     }
 
     render() {
@@ -22,15 +21,13 @@ export class Doctor extends React.Component {
                         <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcomeMan">
-                        Welcome back {this.state.username}!
+                        Welcome back {this.username}!
                     </h1>
                 </nav>
                </div>
                <div className = "menu" id = "doctor">
-                    <button type = "button" id = "manMenuButton">View<br />In-Stock<br/>Drugs</button>
-                    <button type = "button" id = "manMenuButton">View<br/>Incoming<br/>Drugs</button>
-                    <button type = "button" id = "manMenuButton">Search <br/>for a<br />Drug</button>
-                    <button type = "button" id = "manMenuButton">View<br />Similar<br/>Drugs</button>
+                    <Link to ="/doctor/docinventory"><button type = "button" id = "manMenuButton">View<br />Inventory<br/>Information</button></Link>
+                    <Link to ="/doctor/docorders"><button type = "button" id = "manMenuButton">View<br/>Incoming<br/>Orders</button></Link>
                </div>
            </div>
         );

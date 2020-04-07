@@ -14,12 +14,17 @@ import { IncomingOrder, OutgoingOrder, ReceivedOrder, Prescription } from './com
 import { PharmacistIn } from './components/pharmacistComps';
 import { Doctor } from './components/pages/doctor';
 import { ViewCart } from './components/pharmManagerComps/viewCart';
-import { YourPharmacy, Inventory } from './components/pharmManagerComps';
+import { YourPharmacy, Inventory, Sales, Request, CartInventory } from './components/pharmManagerComps';
+import { Mansales, Maninventory, Manorders, Manfinancial } from './components/manufacturerComps';
+import { Docorders, Docinventory } from './components/doctorComps';
 
 
 class App extends React.Component {
+  username;
+    
     constructor(props) {
       super(props);
+      this.username = localStorage['username']
       this.state = {
       }
     }
@@ -31,12 +36,18 @@ class App extends React.Component {
             <Route exact path="/" ><Login /></Route>
             <Route exact path="/login" ><Login /></Route>
             <Route exact path="/register"><Register /></Route>
-            <Route exact path="/pharmManager"><PharmManager /></Route>
+            <Route exact path="/pharmManager/"><PharmManager /></Route>
                 <Route exact path="/pharmManager/cart" ><ViewCart /></Route>
+                  <Route exact path="/pharmManager/cart/inventory" ><CartInventory /></Route>
                 <Route exact path="/pharmManager/yourPharmacy" ><YourPharmacy /></Route>
                 <Route exact path="/pharmManager/inventory" ><Inventory /></Route>
+                <Route exact path="/pharmManager/sales" ><Sales /></Route>
+                <Route exact path="/pharmManager/request" ><Request /></Route>
             <Route exact path="/Manufacturer" ><Manufacturer /></Route>
-
+                <Route exact path="/Manufacturer/mansales" ><Mansales /></Route>
+                <Route exact path="/Manufacturer/maninventory" ><Maninventory /></Route>
+                <Route exact path="/Manufacturer/manorders" ><Manorders /></Route>
+                <Route exact path="/Manufacturer/manfinancial" ><Manfinancial /></Route>
             <Route exact path="/pharmacist" ><Pharmacist /></Route>
                 <Route exact path="/pharmacist/IncomingOrder" ><IncomingOrder /></Route>
                 <Route exact path="/pharmacist/OutgoingOrder" ><OutgoingOrder /></Route>
@@ -45,6 +56,8 @@ class App extends React.Component {
                 <Route exact path="/pharmacist/PharmacistIn" ><PharmacistIn /></Route>
 
             <Route exact path="/Doctor" ><Doctor /></Route>
+                <Route exact path="/doctor/docorders" ><Docorders /></Route>
+                <Route exact path="/doctor/docinventory" ><Docinventory /></Route>
           </Switch>
         </Router>
       )

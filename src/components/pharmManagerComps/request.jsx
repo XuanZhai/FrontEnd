@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./erpharmtechgrayer.png";
 import {Link} from "react-router-dom";
 
-export class OutgoingOrder extends React.Component {
+export class Request extends React.Component {
 
     username;
     
@@ -13,23 +13,19 @@ export class OutgoingOrder extends React.Component {
 
     render() {
         return (
-        <div>
            <div className = "body">
-            <nav>
+                <nav>
                 <div className = "img" id = "logo">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo"/>
                 </div>
-            </nav>
-            <div>
-                <h2>Outgoing Order List</h2>
-            </div>
-            </div>
-                <div>
-                <Link to="/Pharmacist">
+                <h1 className = "yourCart">
+                        Request Form
+                </h1>
+                </nav>
+                <Link to="/pharmManager">
                     <button className = "return">Return to Homepage</button>
-                </Link> 
-            </div> 
-        </div>        
+                    </Link> 
+           </div>
         );
     }
 }

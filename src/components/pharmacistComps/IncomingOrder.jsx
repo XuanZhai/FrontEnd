@@ -4,19 +4,31 @@ import {Link} from "react-router-dom";
 
 export class IncomingOrder extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
+        this.username = localStorage['username']
     }
 
     render() {
         return (
-           <div className = "body">
+            <div>
+            <div className = "body">
             <nav>
                 <div className = "img" id = "logo">
                         <img src={Logo} />
                 </div>
             </nav>
-            <p>List of IncomingOrder</p>
+            <div>
+                <h2>Incoming Order List</h2>
+            </div>
+           </div>
+           <div>
+                <Link to="/Pharmacist">
+                    <button className = "return">Return to Homepage</button>
+                </Link> 
+            </div> 
            </div>
         );
     }

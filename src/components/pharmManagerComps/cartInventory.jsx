@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./erpharmtechgrayer.png";
 import {Link} from "react-router-dom";
 
-export class Inventory extends React.Component {
+export class CartInventory extends React.Component {
 
     username; 
     constructor(props) {
@@ -38,25 +38,22 @@ export class Inventory extends React.Component {
                 <div className = "itemsTable">
                     <table>
                         <tr>
-                        <th><button type = "button" id = "expDate">Item Name</button></th>
-                            <th><button type = "button" id = "expDate">Units</button></th>
-                            <th><button type = "button" id = "expDate">Cost per Unit</button></th>
-                            <th><button type = "button" id = "expDate">Expiration Date</button></th>
+                            <th>Item</th>
+                            <th>Cost Per Unit</th>
                         </tr>
                             {this.drugs.map(item => (
                                 <tr>
                                   <td id = "item">{item.name}
+                                  <Link to="/pharmManager/cart"><button type = "button" id = "swap">Select</button></Link>
                                   </td>
-                                  <td id = "item">
-                                      {item.units}
-                                    </td>
-
                                     <td id = "item">${item.cost}</td>
-                                    <td id = "item">{item.expire}</td>
                                 </tr>
                             ))}
                     </table>
                 </div>
+                <Link to="/pharmManager/cart">
+                    <button className = "return" id = "viewInventory">View Cart</button>
+                    </Link> 
                 <Link to="/pharmManager">
                     <button className = "return">Return to Homepage</button>
                     </Link> 

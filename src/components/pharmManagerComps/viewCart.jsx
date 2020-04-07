@@ -4,8 +4,11 @@ import {Link} from "react-router-dom";
 
 export class ViewCart extends React.Component {
 
+    username;
+
     constructor(props) {
         super(props);
+        this.username = localStorage['username']
         this.state = {
             total: 14,
             quantity: 0,
@@ -53,7 +56,7 @@ export class ViewCart extends React.Component {
                             {this.state.drugs.map(item => (
                                 <tr>
                                   <td id = "item">{item.name}
-                                  <button type = "button" id = "swap">Swap</button>
+                                  <Link to="cart/inventory"><button type = "button" id = "swap">Swap</button></Link>
                                   </td>
                                   <td id = "item">
                                 <select id = "quantity" onChange={this.findQuantity}>
@@ -76,7 +79,7 @@ export class ViewCart extends React.Component {
                         <tr className = "lastRow">
                             <td>
                                 <div className = "extraButtons">
-                                    <button type = "button" id = "addItems">Add Items</button>
+                                <Link to="cart/inventory"><button type = "button" id = "addItems">Add Items</button></Link>
                                 </div>
                             </td>
                             <td colSpan = "2">
@@ -92,6 +95,9 @@ export class ViewCart extends React.Component {
                         </tr>
                     </table>
                 </div>
+                <Link to="/pharmManager">
+                    <button className = "return">Return to Homepage</button>
+                    </Link> 
            </div>
         );
     }

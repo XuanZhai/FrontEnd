@@ -5,8 +5,11 @@ import {Link} from "react-router-dom";
 
 export class Pharmacist extends React.Component {
     
+    username;
+    
     constructor(props){
         super(props);
+        this.username = localStorage['username']
         this.state = {
             username: "test",
             notificationlist: ["firstly created 3/27", "double checked 3/28","test notification 3/29", "new notification 3/30"]
@@ -40,10 +43,10 @@ export class Pharmacist extends React.Component {
                 <div className = "navBar">
                     <nav>
                         <div className = "img">
-                            <img src={Logo} />
+                            <img src={Logo} alt="Logo" />
                         </div>
                         <h1 className = "welcome">
-                            Welcome back {this.state.username}!
+                            Welcome back {this.username}!
                         </h1>
                     </nav>
                     <div class = "notification">

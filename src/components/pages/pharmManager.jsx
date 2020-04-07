@@ -5,11 +5,11 @@ import {Link} from "react-router-dom";
 
 export class PharmManager extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
-        this.state = {
-            username: this.params.username,
-        };
+        this.username = localStorage['username']
     }
 
     render() {
@@ -21,7 +21,7 @@ export class PharmManager extends React.Component {
                         <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcome">
-                        Welcome back {this.props.username}!
+                        Welcome back {this.username}!
                     </h1>
                     <Link to="/pharmManager/cart">
                         <button id = "cart" type="button">
@@ -34,8 +34,8 @@ export class PharmManager extends React.Component {
                <div className = "menu">
                     <Link to ="/pharmManager/yourPharmacy"><button type = "button" id = "menuButton">Your<br />Pharmacy</button></Link>
                     <Link to ="/pharmManager/inventory"><button type = "button" id = "menuButton">View<br/>Inventory</button></Link>
-                    <button type = "button" id = "menuButton">View<br/>Sales</button>
-                    <button type = "button" id = "menuButton">Send<br /> Request</button>
+                    <Link to ="/pharmManager/sales"><button type = "button" id = "menuButton">View<br/>Sales</button></Link>
+                    <Link to ="/pharmManager/request"><button type = "button" id = "menuButton">Send<br /> Request</button></Link>
                </div>
            </div>
         );

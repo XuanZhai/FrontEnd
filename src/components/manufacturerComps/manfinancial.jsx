@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./erpharmtechgrayer.png";
 import {Link} from "react-router-dom";
 
-export class YourPharmacy extends React.Component {
+export class Manfinancial extends React.Component {
 
     username;
     
@@ -19,7 +19,7 @@ export class YourPharmacy extends React.Component {
                         <img src={Logo} alt="Logo"/>
                 </div>
                 <h1 className = "yourCart">
-                        Your Pharmacy
+                        Financial
                 </h1>
                 </nav>
                 <div className = "financeInfo">
@@ -34,7 +34,7 @@ export class YourPharmacy extends React.Component {
                     </select>
                     </h1>
                 </div>
-                <Link to="/pharmManager">
+                <Link to="/manufacturer">
                     <button className = "return">Return to Homepage</button>
                     </Link> 
            </div>

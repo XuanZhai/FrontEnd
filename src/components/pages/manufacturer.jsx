@@ -5,12 +5,11 @@ import {Link} from "react-router-dom";
 
 export class Manufacturer extends React.Component {
 
+    username;
+    
     constructor(props) {
         super(props);
-        this.state = {
-            username: "test",
-        };
-        // const { username } = this.props.match.params.username
+        this.username = localStorage['username']
     }
 
     render() {
@@ -22,16 +21,15 @@ export class Manufacturer extends React.Component {
                         <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcomeMan">
-                        Welcome back {this.state.username}!
+                        Welcome back {this.username}!
                     </h1>
                 </nav>
                </div>
                <div className = "menu" id = "manufacturer">
-                    <button type = "button" id = "manMenuButton">View<br />Available <br/>Medications</button>
-                    <button type = "button" id = "manMenuButton">View<br/>Incoming <br/> Drugs</button>
-                    <button type = "button" id = "manMenuButton">View<br/>Your <br/> Sales</button>
-                    <button type = "button" id = "manMenuButton">View<br /> Manufacturer <br/> Information</button>
-                    <button type = "button" id = "manMenuButton">View<br /> Drug <br/> Information</button>
+                    <Link to ="/manufacturer/maninventory"><button type = "button" id = "manMenuButton">View<br />Inventory<br/>Information</button></Link>
+                    <Link to ="/manufacturer/manorders"><button type = "button" id = "manMenuButton">View<br/>Outgoing<br/> Orders</button></Link>
+                    <Link to ="/manufacturer/mansales"><button type = "button" id = "manMenuButton">View<br/>Your<br/> Sales</button></Link>
+                    <Link to ="/manufacturer/manfinancial"><button type = "button" id = "manMenuButton">View<br/>Financial<br/>Information</button></Link>
                </div>
            </div>
         );
