@@ -16,7 +16,7 @@ export class IncomingOrder extends React.Component {
            <div className = "body">
             <nav>
                 <div className = "img" id = "logo">
-                        <img src={Logo} />
+                        <img src={Logo} alt="Logo" />
                 </div>
             </nav>
             <p>List of IncomingOrder</p>

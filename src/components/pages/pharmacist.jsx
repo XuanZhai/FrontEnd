@@ -43,7 +43,7 @@ export class Pharmacist extends React.Component {
                 <div className = "navBar">
                     <nav>
                         <div className = "img">
-                            <img src={Logo} />
+                            <img src={Logo} alt="Logo" />
                         </div>
                         <h1 className = "welcome">
                             Welcome back {this.username}!

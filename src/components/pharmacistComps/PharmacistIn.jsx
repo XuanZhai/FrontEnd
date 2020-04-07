@@ -17,7 +17,7 @@ export class PharmacistIn extends React.Component {
                 <div className = "navBar">
                     <nav>
                         <div className = "img">
-                            <img src={Logo} />
+                            <img src={Logo} alt="Logo" />
                         </div>
                     </nav>
                 </div>
