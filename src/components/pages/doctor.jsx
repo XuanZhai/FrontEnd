@@ -26,10 +26,8 @@ export class Doctor extends React.Component {
                 </nav>
                </div>
                <div className = "menu" id = "doctor">
-                    <button type = "button" id = "manMenuButton">View<br />In-Stock<br/>Drugs</button>
-                    <button type = "button" id = "manMenuButton">View<br/>Incoming<br/>Drugs</button>
-                    <button type = "button" id = "manMenuButton">Search <br/>for a<br />Drug</button>
-                    <button type = "button" id = "manMenuButton">View<br />Similar<br/>Drugs</button>
+                    <Link to ="/doctor/docinventory"><button type = "button" id = "manMenuButton">View<br />Inventory<br/>Information</button></Link>
+                    <Link to ="/doctor/docorders"><button type = "button" id = "manMenuButton">View<br/>Incoming<br/>Orders</button></Link>
                </div>
            </div>
         );
