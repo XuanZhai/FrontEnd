@@ -15,6 +15,8 @@ import { PharmacistIn } from './components/pharmacistComps';
 import { Doctor } from './components/pages/doctor';
 import { ViewCart } from './components/pharmManagerComps/viewCart';
 import { YourPharmacy, Inventory, Sales, Request, CartInventory } from './components/pharmManagerComps';
+import { Mansales, Maninventory, Manorders, Manfinancial } from './components/manufacturerComps';
+import { Docorders, Docinventory } from './components/doctorComps';
 
 
 class App extends React.Component {
@@ -42,7 +44,10 @@ class App extends React.Component {
                 <Route exact path="/pharmManager/sales" ><Sales /></Route>
                 <Route exact path="/pharmManager/request" ><Request /></Route>
             <Route exact path="/Manufacturer" ><Manufacturer /></Route>
-
+                <Route exact path="/Manufacturer/mansales" ><Mansales /></Route>
+                <Route exact path="/Manufacturer/maninventory" ><Maninventory /></Route>
+                <Route exact path="/Manufacturer/manorders" ><Manorders /></Route>
+                <Route exact path="/Manufacturer/manfinancial" ><Manfinancial /></Route>
             <Route exact path="/pharmacist" ><Pharmacist /></Route>
                 <Route exact path="/pharmacist/IncomingOrder" ><IncomingOrder /></Route>
                 <Route exact path="/pharmacist/OutgoingOrder" ><OutgoingOrder /></Route>
@@ -51,6 +56,8 @@ class App extends React.Component {
                 <Route exact path="/pharmacist/PharmacistIn" ><PharmacistIn /></Route>
 
             <Route exact path="/Doctor" ><Doctor /></Route>
+                <Route exact path="/doctor/docorders" ><Docorders /></Route>
+                <Route exact path="/doctor/docinventory" ><Docinventory /></Route>
           </Switch>
         </Router>
       )
