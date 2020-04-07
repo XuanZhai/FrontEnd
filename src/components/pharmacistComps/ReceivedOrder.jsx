@@ -12,13 +12,22 @@ export class ReceivedOrder extends React.Component {
     }
     render() {
         return (
+            <div>
            <div className = "body">
             <nav>
                 <div className = "img" id = "logo">
-                        <img src={Logo} alt="Logo" />
+                        <img src={Logo} />
                 </div>
             </nav>
-            <p>List of ReceivedOrder</p>
+           </div>
+            <div>
+                <h2>Received Order List</h2>
+            </div>
+           <div>
+                <Link to="/Pharmacist">
+                    <button className = "return">Return to Homepage</button>
+                </Link> 
+            </div> 
            </div>
         );
     }

@@ -13,14 +13,23 @@ export class OutgoingOrder extends React.Component {
 
     render() {
         return (
+        <div>
            <div className = "body">
             <nav>
                 <div className = "img" id = "logo">
-                        <img src={Logo} alt="Logo" />
+                        <img src={Logo} />
                 </div>
             </nav>
-            <p>List of OutgoingOrder</p>
-           </div>
+            <div>
+                <h2>Outgoing Order List</h2>
+            </div>
+            </div>
+                <div>
+                <Link to="/Pharmacist">
+                    <button className = "return">Return to Homepage</button>
+                </Link> 
+            </div> 
+        </div>        
         );
     }
 }
