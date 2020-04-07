@@ -21,7 +21,7 @@ export class Doctor extends React.Component {
                         <img src={Logo} alt="Logo"/>
                     </div>
                     <h1 className = "welcomeMan">
-                        Welcome back {this.state.username}!
+                        Welcome back {this.username}!
                     </h1>
                 </nav>
                </div>

@@ -46,7 +46,7 @@ export class Pharmacist extends React.Component {
                             <img src={Logo} />
                         </div>
                         <h1 className = "welcome">
-                            Welcome back {this.state.username}!
+                            Welcome back {this.username}!
                         </h1>
                     </nav>
                     <div class = "notification">

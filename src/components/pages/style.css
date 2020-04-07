@@ -222,4 +222,50 @@ table {
     margin-right: 0.5em;
 }
 
+.return {
+    margin: 1em;
+    float: left;
+    position: relative;
+    color: white;
+    background-color: #4a64a8;
+    border-style: solid;
+    border-color: #233050;
+    border-width: .05em;
+    border-radius: .1em;
+    transition: all 250ms ease-in-out;
+    text-align: center;
+    font-size: x-large;
+    cursor: pointer;
+}
 
+.return:hover {
+    background-color: #233050;
+}
+
+/*Styles for your pharmacy page*/
+
+#range {
+    font-size: large;
+    margin: 1em;
+}
+
+#viewInventory {
+    float: right;
+}
+
+.tableHeader {
+    margin: .3em;
+}
+
+#expDate {
+    background: none;
+    font-size: x-large;
+    border: none;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+}
+
+#expDate:hover {
+    text-decoration: underline;
+}
